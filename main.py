@@ -2,12 +2,12 @@ import numpy as np
 from scipy import stats
 
 def main():
-    with open('files/cosine_values_for_ttest_generate.txt', 'r', encoding='utf8') as source:
+    with open('files/generate.txt', 'r', encoding='utf8') as source:
         contents = (source.readlines())
         contents = [float(content.strip()) for content in contents]
         contents = np.array(contents)
 
-    with open('files/cosine_values_for_ttest_original.txt', 'r', encoding='utf8') as source:
+    with open('files/original.txt', 'r', encoding='utf8') as source:
         original_contents = (source.readlines())
         original_contents = [float(content.strip()) for content in original_contents]
         original_contents = np.array(original_contents)
