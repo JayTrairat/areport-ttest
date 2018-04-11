@@ -29,6 +29,8 @@ def main():
     print('average x2 :: ' + str(average_x2))
     print('standard deviation 1 :: ' + str(sd_sd1))
     print('standard deviation 2 :: ' + str(sd_sd2))
+    print('members 1 :: ' + str(n_n1))
+    print('members 2 :: ' + str(n_n2))
     print('z-value :: ' + str(z_value))
 
 if __name__ == '__main__':
