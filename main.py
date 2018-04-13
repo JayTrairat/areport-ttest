@@ -25,6 +25,9 @@ def main():
     n_n2 = len(original_contents)
 
     t_value = (average_x1 - average_x2)/np.sqrt((sd_sd1 ** 2 / n_n1) + (sd_sd2 ** 2 / n_n2))
+    # df = (n_n1 + n_n2) - 2
+    df = 58
+    p_value = 1 - stats.t.cdf(t_value, df=df)
     print('average x1 :: ' + str(average_x1))
     print('average x2 :: ' + str(average_x2))
     print('standard deviation 1 :: ' + str(sd_sd1))
@@ -32,8 +35,9 @@ def main():
     print('members 1 :: ' + str(n_n1))
     print('members 2 :: ' + str(n_n2))
     print('t-value :: ' + str(t_value))
+    print('p-value :: ' + str(p_value))
 
-    ddof = (n_n1 + n_n2) - 2
+
     ## Cross Checking with the internal scipy function
     t2, p2 = stats.ttest_ind(original_contents, contents)
     print("t = " + str(t2))
